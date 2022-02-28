@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Price of the house in Boston </h1>
+
+    <div class="form">
+        <form action="/" method="POST">
+            <textarea class="number" name="CRIM" id="CRIM" rows=1 placeholder="crime_rate,0-88.97"></textarea>
+            <textarea class="number" name="ZN" id="ZN" rows=1 placeholder="land_zoned,0-100"></textarea>
+            <textarea class="number" name="INDUS" id="INDUS" rows=1 placeholder="acres,0.46-27.7"></textarea>
+            <textarea class="number" name="CHAS" id="CHAS" rows=1 placeholder="river_bound,0 or 1"></textarea>
+            <textarea class="number" name="NOX" id="NOX" rows=1 placeholder="nitric_oxide_conc,0.38-0.87"></textarea>
+            <textarea class="number" name="RM" id="RM" rows=1 placeholder="rooms_dwelling,3.56-8.78"></textarea>
+            <textarea class="number" name="AGE" id="AGE" rows=1 placeholder="home_before_1940,2.9-100"></textarea>
+            <textarea class="number" name="DIS" id="DIS" rows=1 placeholder="distance_to_centres,1.12-12.12"></textarea>
+            <textarea class="number" name="RAD" id="RAD" rows=1 placeholder="radial_highways,1-24"></textarea>
+            <textarea class="number" name="TAX" id="TAX" rows=1 placeholder="property_tax,187-711"></textarea>
+            <textarea class="number" name="PTRATIO" id="PTRATIO" rows=1 placeholder="pupil_teacher_ratio,12.6-22"></textarea>
+            <textarea class="number" name="B" id="B" rows=1 placeholder="blacks_in_town,0.32-396.9"></textarea>
+            <textarea class="number" name="LSTAT" id="LSTAT" rows=1 placeholder="lower_status,1.73-37.97"></textarea>
+
+            <button type="submit" class="btn btn-primary mb-2">Predict</button></br>
+                        </br>
+        </form>
+    </div>
+</div>
+{% endblock %}
